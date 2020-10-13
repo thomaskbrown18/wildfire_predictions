@@ -12,13 +12,19 @@ This repository contains data collection, exploratory data analysis, and a convo
 For this project, I used the Google Maps API to collect satellite imagery for roughly 12,000 locations that have seen wildfires in the past 12 years. For each latitude and longitude set (sourced from the Washington State DNR [here](https://data-wadnr.opendata.arcgis.com/datasets/dnr-fire-statistics-2008-present-1/data)), I plugged the location data into the Maps API to pull an image. For the non-wildfire images, I simply used a randomly generated set of 10,000 longitude and latitude pairs existing in Washington. This is how I sourced my labeled data for this project. Examples below:
 
 __Areas with wildfires:__
+
 ![text](example_images/wf1.jpg)
+
 ![text](example_images/wf2.jpg)
+
 ![text](example_images/wf3.jpg)
 
 __Areas without wildfires:__
+
 ![text](example_images/nwf1.jpg)
+
 ![text](example_images/nwf2.jpg)
+
 ![text](example_images/nwf3.jpg)
 
 While I was unable to collect satellite imagery of the site a few days before the fire, I believe this will suffice as a proof of concept, especially since areas that experience wildfires often experience them again.
