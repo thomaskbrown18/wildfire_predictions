@@ -1,10 +1,5 @@
 # Wildfire Prevention with Satellite Image Analysis
 
-Note: This is a work in progress, please check back soon!
-
--TB
-
---------------------------------------------------------------------------------
 Washington State experiences thousands of wildfires every year. My goal for this project is to plant the seed for a product or service that can scan through satellite data in order to identify areas at risk for wildfires. While I start this project with a focus on Washington State, it can easily be expanded to data from the entire world. The users of this product would likely be state governments interested in being able to prevent wildfires in their state.
 
 This repository contains data collection, exploratory data analysis, and several convolutional neural network models used to predict whether or not a location is susceptible to wildfires. There is also a notebook previewing implementation of the neural network for real world applications. The data for this exploration consists of roughly 20,000 labeled satellite images. 10,000 of the images are locations which have experienced wildfires, while the other 10,000 have never seen a wildfire before.
@@ -45,7 +40,17 @@ It's interesting to see where the clusters of arson are. This is another insight
 
 # Neural Network
 
-For this project, I chose to use a convolutional neural network. It's the industry standard for image recognition as it is able to pick up patterns and distinguish different images from each other. A convolutional neural network works by using filters that scan through images. At first, these filters are randomly weighted, but as the model learns and is refined, the filters begin to pick up patterns like edges, lines, shapes, or even color intensity (in the case of RGB images). I tried several versions of the convolutional neural network, and by the end, I had one that I was satisfied with.
+For this project, I chose to use a convolutional neural network. It's the industry standard for image recognition as it is able to pick up patterns and distinguish different images from each other. A convolutional neural network works by using filters that scan through images. At first, these filters are randomly weighted, but as the model learns and is refined, the filters begin to pick up patterns like edges, lines, shapes, or even color intensity (in the case of RGB images). I tried several versions of the convolutional neural network, and by the end, I had one that I was satisfied with. 
+
+The model turned out to be 77% accurate on the training set and 69% accurate on the test set.  While this is not stellar, I think it is reasonably accurate given how much of Washington is covered in relatively dry, flammable forest.  As you can see in the confusion matrix, much of the loss in accuracy is driven by the high false positive rate.  While this is not ideal, it's understandable given how many images in the non-wildfire category are still at moderate risk of wildfire.
+
+Below is the chart showing training and testing accuracy and loss, as well as the confusion matrices for the training and test sets:
+
+![Imgur](https://i.imgur.com/19Mb4YI.png)
+
+![Imgur](https://i.imgur.com/5BQCV55.png)
+
+![Imgur](https://i.imgur.com/fnKzt76.png)
 
 At the end of training, my model was able to accurately predict wildfire risk of new locations as fed into the system. For example, I fed in the longitude and latitude of a location of a wildfire in California (the model has not seen any images from California so I thought it would be an interesting test), and it correctly identified the area as high risk.
 
@@ -59,7 +64,7 @@ In the future, there are several things I would like to try:
 
 # Conclusion
 
-There's a ways to go before this project is fully fleshed out and deployable, but I believe it's a great start for a different take on wildfire prevention. Hopefully in the future, this project can be fully deployed and used by fire deparments around the world. As I gain more expertise in handling image recognition tasks and collecting satellite imagery from more complex and thorough sources (e.g. NASA), I can't wait to come back to this project and develop the neural network to make it more and more accurate!
+There's a ways to go before this project is fully deployable on a national or international level, but I believe it's a great start for a different take on wildfire prevention. Hopefully in the future, this project can be fully deployed and used by fire deparments around the world. As I gain more expertise in handling image recognition tasks and collecting satellite imagery from more complex and thorough sources (e.g. NASA), I can't wait to come back to this project and develop the neural network to make it more and more accurate!
 
 Thanks for reading, and please let me know if you have any questions or comments!
 
