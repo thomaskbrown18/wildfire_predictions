@@ -2,7 +2,7 @@
 
 Washington State experiences thousands of wildfires every year. My goal for this project is to plant the seed for a product or service that can scan through satellite data in order to identify areas at risk for wildfires. While I start this project with a focus on Washington State, it can easily be expanded to data from the entire world. The users of this product would likely be state governments interested in being able to prevent wildfires in their state.
 
-This repository contains data collection, clenaing, exploratory data analysis, and a convolutional neural network model used to predict whether or not a location is susceptible to wildfires. There is also a notebook previewing implementation of the neural network for real world applications. The data for this exploration consists of roughly 20,000 labeled satellite images. 12,000 of the images are locations which have experienced wildfires, while the other 10,000 have never seen a wildfire before.
+This repository contains data collection, clenaing, exploratory data analysis, and a convolutional neural network model used to predict whether or not a location is susceptible to wildfires. There is also a notebook previewing implementation of the neural network for real world applications. The data for this exploration consists of roughly 20,000 labeled satellite images. 12,000 of the images are locations which have experienced wildfires, while the other 10,000 have never seen a wildfire before. Distinguishing between the two types of images is the main task of the artificial neural network.
 
 The structure of this repository is as follows:
 - Posing the Question: First I needed to understand exactly how I wanted to pose the question of how to address wildfires
